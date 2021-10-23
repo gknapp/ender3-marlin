@@ -1180,11 +1180,11 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -43.4, -10.2, -1.2 }
+#define NOZZLE_TO_PROBE_OFFSET { -43.4, -10.2, -1.82 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 15
+#define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1671,8 +1671,8 @@
 #define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
-  #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
-  #define LCD_PROBE_Z_RANGE 4     // (mm) Z Range centered on Z_MIN_POS for LCD Z adjustment
+  #define MESH_EDIT_Z_STEP  0.02   // (mm) Step size while manually probing Z axis.
+  #define LCD_PROBE_Z_RANGE 4      // (mm) Z Range centered on Z_MIN_POS for LCD Z adjustment
   // #define MESH_EDIT_MENU        // Add a menu to edit mesh points
 #endif
 
